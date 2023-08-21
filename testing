@@ -1,6 +1,6 @@
 local module = {}
 
-module.Create = function(BGColor, TopColor, HideButtonColor, LabelColor, Name, ltc, hbtc, sbbc, sbtc)
+module.Create = function(Name)
 	local screengui = Instance.new("ScreenGui")
 	local frame = Instance.new("Frame")
 	local grid = Instance.new("UIGridLayout")
@@ -15,8 +15,8 @@ module.Create = function(BGColor, TopColor, HideButtonColor, LabelColor, Name, l
 	showbutton.Parent = frame
 	showbutton.Position = UDim2.new(1.146, 0, 1.097, 0)
 	showbutton.Size = UDim2.new(0.313, 0, 0.128, 0)
-	showbutton.BackgroundColor = Color3.fromRGB(sbbc)
-	showbutton.TextColor = Color3.fromRGB(sbtc)
+	showbutton.BackgroundColor = Color3.fromRGB(0, 0, 0)
+	showbutton.TextColor = Color3.fromRGB(255, 255, 255)
 	showbutton.TextScaled = true
 	showbutton.MouseButton1Click:Connect(function()
 		if showbutton.Visible == true and frame.Visible == true then
@@ -41,8 +41,8 @@ module.Create = function(BGColor, TopColor, HideButtonColor, LabelColor, Name, l
 	name.Parent = frame
 	name.Size = UDim2.new(1, 0, 0.128, 0)
 	name.Position = UDim2.new(0, 0, 0, 0)
-	name.BackgroundColor = Color3.fromRGB(LabelColor)
-	name.TextColor = Color3.fromRGB(ltc)
+	name.BackgroundColor = Color3.fromRGB(0, 0, 0)
+	name.TextColor = Color3.fromRGB(255, 255, 255)
 	name.Active = true
 	name.Draggable = true
 	name.TextScaled = true
@@ -51,8 +51,8 @@ module.Create = function(BGColor, TopColor, HideButtonColor, LabelColor, Name, l
 	hidebutton.Parent = name
 	hidebutton.Size = UDim2.new(0.072, 0, 1, 0)
 	hidebutton.Position = UDim2.new(0.928, 0, 0, 0)
-	hidebutton.BackgroundColor = Color3.fromRGB(HideButtonColor)
-	hidebutton.TextColor = Color3.fromRGB(hbtc)
+	hidebutton.BackgroundColor = Color3.fromRGB(0,0,0)
+	hidebutton.TextColor = Color3.fromRGB(255,255,255)
 	hidebutton.TextScaled = true
 	hidebutton.MouseButton1Click:Connect(function()
 		frame.Visible = false
@@ -60,9 +60,9 @@ module.Create = function(BGColor, TopColor, HideButtonColor, LabelColor, Name, l
 	end)
 end
 
-module.CreateButton = function(BackgroundColor, TextColor)
+module.CreateButton = function()
 	local button = Instance.new("TextButton")
 	button.Parent = game.CoreGui:WaitForChild("Hello").Main
-	button.BackgroundColor = Color3.fromRGB(BackgroundColor)
-	button.TextColor = Color3.fromRGB(TextColor)
+	button.BackgroundColor = Color3.fromRGB(0,0,0)
+	button.TextColor = Color3.fromRGB(255,255,255)
 end
