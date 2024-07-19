@@ -1,15 +1,14 @@
-
-local funcTable = {
+local Frame
+return {
 	CreateUI = function(name)
 		--mainguis
 		local ScreenGui = Instance.new("ScreenGui")
-		local Frame = Instance.new("Frame")
+		Frame = Instance.new("Frame")
 		local TextLabel = Instance.new("TextLabel")
 		--uicorners
 		local UICorner = Instance.new("UICorner")
 		local UIGridLayout = Instance.new("UIGridLayout")
 		local UICorner_2 = Instance.new("UICorner")
-		local UICorner_3 = Instance.new("UICorner")
 		ScreenGui.Enabled = true
 		Frame.Visible = true
 		TextLabel.Visible = true
@@ -58,6 +57,7 @@ local funcTable = {
 		UICorner_2.Parent = TextLabel
 	end,
 	createBtn = function(name, text, call)
+		local UICorner_3 = Instance.new("UICorner")
 		local TextButton = Instance.new("TextButton")
 		TextButton.Parent = Frame
 		TextButton.Name = name
@@ -78,5 +78,3 @@ local funcTable = {
 		end)
 	end
 }
-
-return funcTable
