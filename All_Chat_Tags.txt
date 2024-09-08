@@ -25,7 +25,7 @@ OldVIP.Parent = plr
 OldVIP.Value = "0"
 OldVIP.Name = "OldVIP"
 
-local Ronin = Instance.new("IntValue")
-Ronin.Parent = plr
-Ronin.Value = "0"
-Ronin.Name = "Ronin"
+local Romin = Instance.new("IntValue")
+Romin.Parent = plr
+Romin.Value = "0"
+Romin.Name = "Romin"
